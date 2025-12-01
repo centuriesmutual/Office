@@ -12,10 +12,11 @@ export default function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email === 'admin@office.com' && password === 'admin123') {
+    // Accept any username and password
+    if (email && password) {
       router.push('/office');
     } else {
-      setError('Invalid credentials');
+      setError('Please enter both email and password');
     }
   };
 
